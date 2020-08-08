@@ -16,7 +16,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>i am react code</h1>
+      <div>i am react code</div>
     )
   }
 
