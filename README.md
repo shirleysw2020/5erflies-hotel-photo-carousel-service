@@ -1,6 +1,8 @@
 # Project Name
 
 > Project description:
+
+
 On a generic airbnb listing page, using MongoDB hosted database for storing relevant data that will be displayed on the photo carousel service component.
 I will set up APIs for client side to interact with the database. Next goal is the build the user interface with React and style components.
 
