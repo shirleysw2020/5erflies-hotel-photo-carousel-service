@@ -9,7 +9,7 @@ const listings = [];
 
 const seedListing = () => {
   const listPhotos = [s3Photos.boccaccio, s3Photos.calanteLuna, s3Photos.trinita];
-  const titles = ['Boccaccio 22', 'CalanteLuna', 'Trinita'];  //personal perference for listing titles
+  const titles = ['Boccaccio 22', 'CalanteLuna Relais - M\'Illumino d\'Immenso', 'Trinita dei Monti superior suite Spanish steps'];  //personal perference for listing titles
   // loop 100 times
   for (let r = 0; r < 100; r++) {
     const dataInfo = {
