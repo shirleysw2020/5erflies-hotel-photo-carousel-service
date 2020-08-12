@@ -3,15 +3,19 @@ import styled from 'styled-components';
 import App from './App.jsx';
 
 const Gallery = ({list}) => (
-  <Wrapper>
-    <BigGrid><Imgagery src={list.photos[0]}/></BigGrid>
-    {list.photos.slice(1, 5).map((photo, index) => {
-      // add bottom-padding component only first 2 pics
-      return (index <= 1)
-      ? <Grid primary><Imgagery src={photo}/></Grid>
-      : <Grid><Imgagery src={photo}/></Grid>
-    })}
-  </Wrapper>
+  <div>
+    <Wrapper>
+      <Imgagery src={list.photos[0]}/>
+    </Wrapper>
+    <Wrapper2>
+      {list.photos.slice(1, 5).map((photo, index) => {
+        // add bottom-padding component only first 2 pics
+        return (
+          <Grid primary><Imgagery src={photo} key={index}/></Grid>
+        )
+      })}
+    </Wrapper2>
+  </div>
 )
 
 const Imgagery = styled.img`
@@ -20,35 +24,29 @@ const Imgagery = styled.img`
 
 const Wrapper = styled.div`
   max-width: 1120px;
+  float: left;
+  width: 49.5%;
+  margin-right: 0.5%;
   /* display: flex; */
-  width: 100%;
-  height: 100%;
-  height: 380px;
-  border: 5px solid #fff;
-  border-radius: 15px;
-  background: white;
 `;
 
-// const Border = styled.
-const BigGrid = styled.div`
+// const BigGrid = styled.div`
+//   flex-grow:1;
+// `;
+
+const Wrapper2 = styled.div`
   display: flex;
-  flex-direction: row;
-  float: left;
-  display: inline-block;
-  padding-right: 1%;
-  width: 49%;
+  width: 50%;
+  flex-flow: wrap;
 `;
 
 const Grid = styled.div`
-  display: flex;
-  flex-direction: row;
+  margin-right: 1%;
+  width: 49%;
   float: left;
-  padding-right: 1%;
-  display: inline-block;
-  height: 181px;
-  width: 24%;
-  padding-bottom: ${props => props.primary ? '0.5%' : 'none'};
+  /* padding-bottom: ${props => props.primary ? '0.5%' : 'none'}; */
 `;
+
 
 export default Gallery;
 

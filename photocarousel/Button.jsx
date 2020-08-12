@@ -6,15 +6,25 @@ import { useContext } from 'react';
 // refactored class component to use hooks
 const Button = (props) => {
 
-  // const [listing, setListing] = useState([]);
+  const [open, setOpen] = useState(false);
   // console.log('clientb', listing);
-
+  // new window show onclick
+  if (open === true) {
+    return (<NewWindow>New Window</NewWindow>)
+  }
   return (
-    <PhotoButton>Show more photos</PhotoButton>
+    <PhotoButton onClick={() => setOpen(!open)}>Show more photos</PhotoButton>
   )
 }
 
+const NewWindow = styled.button`
+  height: 100%;
+  color: #D9F2F2;
+`;
+
 const PhotoButton = styled.button`
+  cursor: pointer;
+  touch-action: pan-right pinch-zoom;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;

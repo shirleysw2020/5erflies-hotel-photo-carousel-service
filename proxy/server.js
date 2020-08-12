@@ -4,10 +4,13 @@ const db = require('../database/listing-model');
 const port = 3000
 
 app.use(express.static(__dirname + '/public'));
-// '/user?ID=12345'
-// api will be '/listing' --> database
+// '/user?ID=12345' - client
+// '/user/:id' - server
+
 app.get('/listing', (req, res) => {
+  // query the id thats typed into url
   var id = req.query.id;
+  // console.log("clients typed in this query id", id)
   db.findById(id, (err, listing) => {
     if (err) {
       console.log('server: failed to fetch from db');

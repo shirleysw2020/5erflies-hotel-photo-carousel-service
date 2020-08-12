@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import Star from '../photos/star.png';
 import Superhost from '../photos/superhost.png';
 
-
 const Header = ({list}) => (
   <Wrapper>
       <ThemeProvider theme={theme}>

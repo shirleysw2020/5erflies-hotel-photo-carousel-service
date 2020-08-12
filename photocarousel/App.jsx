@@ -11,10 +11,14 @@ import Button from './Button.jsx';
 const App = (props) => {
   // set state name and initial state
   const [listing, setListing] = useState([]);
+  const [showPopIp, setShow] = useState(false);
   // console.log('clientb', listing);
 
   useEffect(() => { // a hooks thing... similar to componentDidMount
-    axios.get('/listing?id=5')
+    const queryID = window.location.search;
+    // console.log('logged: window.location (url parameter) = ?id=10', queryID)
+    const url = '/listing' + '/' + queryID;
+    axios.get(url)
     .then((res) => {
       // console.log('client:succes geting db', res.data);
       setListing(res.data);
