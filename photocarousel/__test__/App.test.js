@@ -3,10 +3,8 @@ import { shallow } from 'enzyme';
 import App from '../App.jsx';
 
 
-describe('App', () => {
-  it('should render correctly with no props', () => {
-    const component = shallow(<App/>);
-
-    expect(component).toMatchSnapshot();
-  });
+describe('First React component test with Enzyme', () => {
+   it('renders without crashing', () => {
+      shallow(<App />);
+    });
 });
