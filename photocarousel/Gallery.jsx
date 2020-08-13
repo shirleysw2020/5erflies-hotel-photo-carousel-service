@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import App from './App.jsx';
+import Button from './Button.jsx';
 
-const Gallery = ({list}) => (
+const Gallery = ({list, openModal, closeModal, show}) => (
   <div>
-    <Wrapper>
+    <MainWrapper>
       <Imgagery src={list.photos[0]}/>
-    </Wrapper>
-    <Wrapper2>
+    </MainWrapper>
+    <SubWrapper>
       {list.photos.slice(1, 5).map((photo, index) => {
-        // add bottom-padding component only first 2 pics
-        return (
-          <Grid primary><Imgagery src={photo} key={index}/></Grid>
-        )
+        return (<Grid primary>
+            <Imgagery src={photo} key={index}/>
+        </Grid>)
       })}
-    </Wrapper2>
+      <Button
+        openModal={openModal}
+        closeModal={closeModal}
+        show={show}
+        list={list}
+      />
+    </SubWrapper>
   </div>
 )
 
@@ -22,17 +27,18 @@ const Imgagery = styled.img`
   width: 100%;
 `;
 
-const Wrapper = styled.div`
+const MainWrapper = styled.div`
   max-width: 1120px;
   float: left;
   width: 49.5%;
   margin-right: 0.5%;
 `;
 
-const Wrapper2 = styled.div`
+const SubWrapper = styled.div`
   display: flex;
   width: 50%;
   flex-flow: wrap;
+  position: relative;
 `;
 
 const Grid = styled.div`
@@ -44,25 +50,3 @@ const Grid = styled.div`
 
 
 export default Gallery;
-
-// const Gallery = ({list}) => (
-//   <Wrapper>
-//     <BigGrid><img src={list.photos[0]} style={{width: "100%"}}/></BigGrid>
-//     {/* hard-code for now - only show 5 pics */}
-//     {list.photos.slice(1, 5).map((photo, index) => {
-//       return (
-//         <Grid>
-//           {/* {console.log(typeof photo)} */}
-//           <img src={photo} style={{width: "100%"}}/>
-//         </Grid>
-//       )
-//     })}
-//   </Wrapper>
-// )
-
-// if (index <= 1) {
-//   return <Grid primary><Imgagery src={photo}/></Grid>
-// }
-// return (
-//   <Grid><Imgagery src={photo}/></Grid>
-// )
