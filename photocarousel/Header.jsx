@@ -6,6 +6,7 @@ import Superhost from '../photos/superhost.png';
 
 const Header = ({list}) => (
   <Wrapper>
+    {/* <Navbar>AIRBNB</Navbar> */}
       <ThemeProvider theme={theme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
           <InfoData>
@@ -21,6 +22,15 @@ const Header = ({list}) => (
       </ThemeProvider>
   </Wrapper>
 )
+
+// const Navbar = styled.div`
+//     clear:both;
+//     width:100%;
+//     background-color:#d1d1d1;
+//     height:10px;
+//     margin-top:5px;
+//     margin-bottom:5px;
+// `;
 
 const theme = {
   titleColor: '#000',
