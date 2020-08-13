@@ -27,12 +27,7 @@ const Wrapper = styled.div`
   float: left;
   width: 49.5%;
   margin-right: 0.5%;
-  /* display: flex; */
 `;
-
-// const BigGrid = styled.div`
-//   flex-grow:1;
-// `;
 
 const Wrapper2 = styled.div`
   display: flex;
