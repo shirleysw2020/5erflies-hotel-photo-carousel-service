@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> components should match snapshot created 1`] = `
+<div>
+  <button
+    className="sc-bdVaJa glYYXl"
+    onClick={[Function]}
+  >
+    &gt;
+  </button>
+</div>
+`;

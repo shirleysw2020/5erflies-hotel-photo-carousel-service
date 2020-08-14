@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> components should match snapshot created 1`] = `
+<div
+  className="sc-bdVaJa geLmSi"
+>
+  <section
+    className="sc-bxivhb cMsxZW"
+  >
+    CalanteLuna Relais - M'Illumino d'Immenso
+  </section>
+  <div
+    className="sc-bwzfXH fBTmJt"
+  >
+    <img
+      className="sc-htoDjs FbcLk"
+      src="test-file-stub"
+    />
+    <span
+      className="sc-ifAKCX civfCX"
+    >
+      4.01
+    </span>
+    <span
+      className="sc-EHOje jMVZMZ"
+    >
+      (
+      473
+      )
+    </span>
+    <span
+      className="sc-gzVnrw hYRobX"
+    >
+      <span>
+         • 
+      </span>
+    </span>
+    <img
+      className="sc-htoDjs fTXazF"
+      src="test-file-stub"
+    />
+    <span
+      className="sc-EHOje jMVZMZ"
+    >
+      <span>
+        Superhost
+      </span>
+    </span>
+    <span
+      className="sc-gzVnrw hYRobX"
+    >
+      <span>
+         • 
+      </span>
+    </span>
+    <span
+      className="sc-bZQynM ecwvDZ"
+    >
+      Gottliebchester Borders Italy
+    </span>
+  </div>
+</div>
+`;
