@@ -10,6 +10,7 @@
 //     expect(component).toMatchSnapshot();
 //   });
 // });
+// wrapper.instance.function
 
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -26,6 +27,10 @@ it('renders correctly when there is one item', () => {
   const tree = renderer.create(<Gallery list={list} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+// //     it('should not render any <button> when operator is not passed in props', () => {
+//   expect(wrapper.find('button')).toHaveLength(0);
+// });
 
 /*shallow() tests component we provide, and ignores any child components present in the component tree thereafter; if we had a <Header /> and <Footer /> component within <App /> for example, they would be ignored in this test.
 

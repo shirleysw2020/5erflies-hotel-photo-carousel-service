@@ -17,11 +17,6 @@ const Button = ({list, openModal, show}) => {
   )
 }
 
-const NewWindow = styled.div`
-  height: 100%;
-  color: #D9F2F2;
-`;
-
 const PhotoButton = styled.button`
   position: absolute;
   bottom: 20px;

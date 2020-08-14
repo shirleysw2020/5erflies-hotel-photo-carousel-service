@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import axios from 'axios';
 import Header from './Header.jsx';
 import Gallery from './Gallery.jsx';
-// import Modal from './Modal.jsx';
+import Modal from './Modal.jsx';
 
 // refactored class component to use hooks
 const App = (props) => {
@@ -34,10 +34,15 @@ const App = (props) => {
 
   if (listing.length == 0) {return null;}
   if (show === true) {
-    return (<Modal>i am modal</Modal>)
+    return (
+      <Modal
+        list={listing[0]}
+        closeModal={closeModal}
+        show={show}
+      />
+    )
   }
   return (
-    <div>
       <MainWrapper>
         <Header list={listing[0]}/>
         <Gallery
@@ -47,7 +52,6 @@ const App = (props) => {
           show={show}
         />
       </MainWrapper>
-    </div>
   )
 }
 
@@ -62,17 +66,4 @@ const MainWrapper = styled.div`
   font-family: sans-serif, Roboto;
 `;
 
-const Modal = styled.div`
-  width: 500px;
-  height: 100%;
-  position: relative;
-  margin: 0px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 2px;
-  transform: translateY(100%);
-  transition: transform 0.2s ease;
-  box-shadow: 0 2px 8px 3px;
-  /* font-family: Helvetica, Arial, sans-serif; */
-`;
 export default App;
