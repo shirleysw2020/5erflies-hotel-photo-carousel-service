@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './Button.jsx';
 
 const Gallery = ({list, openModal, closeModal, show}) => (
-  <div>
+  <RoundedCorner>
     <MainWrapper>
       <Imgagery src={list.photos[0]}/>
     </MainWrapper>
@@ -20,11 +20,22 @@ const Gallery = ({list, openModal, closeModal, show}) => (
         list={list}
       />
     </SubWrapper>
-  </div>
+  </RoundedCorner>
 )
+
+const RoundedCorner = styled.div`
+  border-radius: 12px;
+  overflow-y: hidden;
+`;
 
 const Imgagery = styled.img`
   width: 100%;
+  cursor: pointer;
+  &: hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  };
 `;
 
 const MainWrapper = styled.div`

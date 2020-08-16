@@ -6,7 +6,6 @@ import Superhost from '../photos/superhost.png';
 
 const Header = ({list}) => (
   <Wrapper>
-    {/* <Navbar>AIRBNB</Navbar> */}
       <ThemeProvider theme={theme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
           <InfoData>
@@ -15,7 +14,7 @@ const Header = ({list}) => (
             <SubColor>({list.numOfReviews})</SubColor>
             <Dot><span> • </span></Dot>
             <Logo host src={Superhost}/>
-            <SubColor>{list.superHost.toString() ? (<span>Superhost</span> ): null}</SubColor>
+            <SubColor>{list.superHost.toString() ? (<span>Superhost</span>) : 'null'}</SubColor>
             <Dot><span> • </span></Dot>
             <Underline>{list.location}</Underline>
           </InfoData>
@@ -23,14 +22,6 @@ const Header = ({list}) => (
   </Wrapper>
 )
 
-// const Navbar = styled.div`
-//     clear:both;
-//     width:100%;
-//     background-color:#d1d1d1;
-//     height:10px;
-//     margin-top:5px;
-//     margin-bottom:5px;
-// `;
 
 const theme = {
   titleColor: '#000',
@@ -60,7 +51,7 @@ const TitleBlock = styled.section`
   margin: 0 auto;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   color: ${props => props.theme.titleColor};
-  font-size: 1.5em;
+  font-size: 26px;
 `;
 
 const RatingSpan = styled.span`
@@ -84,7 +75,7 @@ const Dot = styled.span`
   color: ${props => props.theme.subColor};
 `
 const Logo = styled.img`
-  width: ${props => props.host ? '16px' : '17px'};
+  width: ${props => props.host ? '10px' : '17px'};
   height: ${props => props.host ? '16px' : 'none'};
   padding-bottom: 20px;
   padding-right: 2px;

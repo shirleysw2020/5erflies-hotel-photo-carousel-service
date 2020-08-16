@@ -5,27 +5,21 @@ import { useContext } from 'react';
 
 // refactored class component to use hooks
 const Button = ({list, openModal, show}) => {
-
-  // const [open, setOpen] = useState(false);
-  // console.log('clientb', listing);
-  // new window show onclick
-  // if (open === true) {
-  //   return (<NewWindow>New Window</NewWindow>)
-  // }
   return (
-    <PhotoButton onClick={openModal}>Show more photos</PhotoButton>
+    <PhotoButton onClick={openModal}>Show all photos</PhotoButton>
   )
 }
 
 const PhotoButton = styled.button`
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 30px;
   width: 146px;
   cursor: pointer;
+  letter-spacing: 0.2px;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 450;
   border-radius: 7px;
   color: #000;
   height: 30px;

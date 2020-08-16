@@ -3,18 +3,20 @@ import styled from 'styled-components';
 
 const RightArrow = ({addCount}) => (
   // error: photoCount is read only??
-  <div>
+  <ArrowWrapper>
     <Arrow onClick={addCount}>
-      >
+      &gt;
     </Arrow>
-  </div>
+  </ArrowWrapper>
+  <ArrowWrapper onClick={MinusCount}>
+      &lt;
+  </ArrowWrapper>
 
-  // const LeftArrow = () => (
-  //   <Arrow onClick={MinusCount}>
-  //     Hi
-  //   </Arrow>
-  // )
 )
+const ArrowWrapper = styled.div`
+  display: flex; /* or inline-flex */
+  justify-content: space-between;
+`;
 
 const Arrow = styled.button`
   border-radius: 50%
