@@ -54,7 +54,7 @@ exports[`<Header> components should match snapshot created 1`] = `
       </span>
     </span>
     <span
-      className="sc-gzVnrw cBaglK"
+      className="sc-gzVnrw Ajofz"
     >
       Gottliebchester Borders Italy
     </span>
@@ -70,7 +70,7 @@ exports[`<Header> components should match snapshot created 1`] = `
         src="test-file-stub"
       />
       <span
-        className="sc-gzVnrw ifjYyV"
+        className="sc-gzVnrw lnKKkD"
       >
         Share
       </span>
@@ -83,7 +83,7 @@ exports[`<Header> components should match snapshot created 1`] = `
         src="test-file-stub"
       />
       <span
-        className="sc-gzVnrw ifjYyV"
+        className="sc-gzVnrw lnKKkD"
       >
         Save
       </span>

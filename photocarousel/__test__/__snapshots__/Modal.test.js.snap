@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component Matches the snapshot 1`] = `
+<div>
+  <button
+    className="sc-bwzfXH eHaTBh"
+  >
+    X Close
+  </button>
+  <div
+    className="sc-bdVaJa gSFWEj"
+  >
+    <div
+      className="sc-htpNat hzeKuH"
+    >
+      2
+      /
+      5
+    </div>
+    <img
+      className="sc-bxivhb gJWTZB"
+      src="https://5erflies.s3-us-west-1.amazonaws.com/7fb02bb9-0965-4ffc-a59d-8d7e64f4d9f8.jpg"
+    />
+    <button
+      className="sc-ifAKCX kdjKeg"
+      onClick={[Function]}
+    >
+      &lt;
+    </button>
+    <button
+      className="sc-ifAKCX bnvPTe"
+      onClick={[Function]}
+    >
+      &gt;
+    </button>
+  </div>
+</div>
+`;

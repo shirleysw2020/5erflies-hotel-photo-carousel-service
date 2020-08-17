@@ -13,9 +13,6 @@ const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
   }
   useEffect(() => {
     setphotoCount(clickedPhotoIdx + 1);
-    console.log("type of clickedPhotoIdx", typeof clickedPhotoIdx)
-    console.log("whats clickedPhotoIdx", clickedPhotoIdx)
-    console.log("type of photoCount", typeof photoCount)
   }, [clickedPhotoIdx]);
 
   const addCount = () => {

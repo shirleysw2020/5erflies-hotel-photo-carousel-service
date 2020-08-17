@@ -9,6 +9,7 @@ exports[`renders correctly when there is one item 1`] = `
   >
     <img
       className="sc-htpNat hcRaaq"
+      onClick={[Function]}
       src="https://5erflies.s3-us-west-1.amazonaws.com/1f57bf4f-0b96-4b38-81ad-afc9f739a7a8.jpg"
     />
   </div>

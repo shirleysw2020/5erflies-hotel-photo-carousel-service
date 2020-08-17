@@ -1,5 +1,6 @@
 import React from 'react';
-import { expect } from 'chai';
+import { expect as chaiExpect } from 'chai';
+import { create } from "react-test-renderer";
 import { shallow } from 'enzyme';
 import Modal from '../Modal.jsx';
 
@@ -11,18 +12,26 @@ const mockListing = {
   "https://5erflies.s3-us-west-1.amazonaws.com/9383d706-87a3-4da1-942e-690b6c438d5c.jpg"]
 };
 
+const addCount = () => setphotoCount(photoCount++);
+const clickedPhotoIdx = 1;
+
 describe('<Modal />', () => {
   const wrapper = shallow(<Modal list={mockListing}/>);
   it('shoud exist', () => {
-    expect(wrapper.exists()).to.equal(true);
+    chaiExpect(wrapper.exists()).to.equal(true);
   });
 });
 
 describe('<Modal />', () => {
-  const addCount = () => setphotoCount(photoCount++);
-  const clickedPhotoIdx = 1;
-  it('renders one <Header /> component', () => {
+  it('Modal should have 2 children', () => {
     const wrapper = shallow(<Modal addCount={addCount} list={mockListing} clickedPhotoIdx={clickedPhotoIdx}/>);
-    expect(wrapper.children()).to.have.lengthOf(3);
+    chaiExpect(wrapper.children()).to.have.lengthOf(2);
+  });
+});
+
+describe("Modal component", () => {
+  test("Matches the snapshot", () => {
+    const modal = create(<Modal addCount={addCount} list={mockListing} clickedPhotoIdx={clickedPhotoIdx}/>);
+    expect(modal.toJSON()).toMatchSnapshot();
   });
 });
