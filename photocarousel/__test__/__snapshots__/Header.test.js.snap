@@ -2,62 +2,92 @@
 
 exports[`<Header> components should match snapshot created 1`] = `
 <div
-  className="sc-bdVaJa geLmSi"
+  className="sc-bdVaJa PeosY"
 >
   <section
-    className="sc-bxivhb cMsxZW"
+    className="sc-ifAKCX dmvJkz"
   >
     CalanteLuna Relais - M'Illumino d'Immenso
   </section>
   <div
-    className="sc-bwzfXH fBTmJt"
+    className="sc-bwzfXH kZXRah"
   >
     <img
-      className="sc-htoDjs FbcLk"
+      className="sc-dnqmqq bFJaqh"
       src="test-file-stub"
     />
     <span
-      className="sc-ifAKCX civfCX"
+      className="sc-EHOje bsuoWl"
     >
       4.01
     </span>
     <span
-      className="sc-EHOje jMVZMZ"
+      className="sc-bZQynM BuzJs"
     >
       (
       473
       )
     </span>
     <span
-      className="sc-gzVnrw hYRobX"
+      className="sc-htoDjs etCUlw"
     >
       <span>
          • 
       </span>
     </span>
     <img
-      className="sc-htoDjs fTXazF"
+      className="sc-dnqmqq kTZvYA"
       src="test-file-stub"
     />
     <span
-      className="sc-EHOje jMVZMZ"
+      className="sc-bZQynM BuzJs"
     >
       <span>
         Superhost
       </span>
     </span>
     <span
-      className="sc-gzVnrw hYRobX"
+      className="sc-htoDjs etCUlw"
     >
       <span>
          • 
       </span>
     </span>
     <span
-      className="sc-bZQynM ecwvDZ"
+      className="sc-gzVnrw cBaglK"
     >
       Gottliebchester Borders Italy
     </span>
+  </div>
+  <div
+    className="sc-htpNat fTeqPD"
+  >
+    <button
+      className="sc-iwsKbI hRMDpm"
+    >
+      <img
+        className="sc-dnqmqq gStQyt"
+        src="test-file-stub"
+      />
+      <span
+        className="sc-gzVnrw ifjYyV"
+      >
+        Share
+      </span>
+    </button>
+    <button
+      className="sc-iwsKbI hRMDpm"
+    >
+      <img
+        className="sc-dnqmqq gStQyt"
+        src="test-file-stub"
+      />
+      <span
+        className="sc-gzVnrw ifjYyV"
+      >
+        Save
+      </span>
+    </button>
   </div>
 </div>
 `;

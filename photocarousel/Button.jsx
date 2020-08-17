@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import { useContext } from 'react';
 
 // refactored class component to use hooks
 const Button = ({list, openModal, show}) => {

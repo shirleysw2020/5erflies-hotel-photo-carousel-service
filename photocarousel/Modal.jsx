@@ -1,72 +1,63 @@
 import React, { useState, useEffect } from 'react';
-import styled ,{ keyframes } from 'styled-components';
-// import RightArrow from './RightArrow.jsx';
+import styled, { keyframes } from 'styled-components';
 
-const Modal = ({list, closeModal, show}) => {
-  // error: photoCount is read only??
-  const [photoCount, setphotoCount] = useState(1);
+const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
+
+  const [photoCount, setphotoCount] = useState(clickedPhotoIdx + 1);
+  // var [photoCount, setphotoCount] = useState(1);
+  const [morePhotosCount, setMorePhotosCount] = useState(1);
+  // var [morePhotosButtonClicked, setMorePhotosButton] = useState(false);
+  const clickedButton = () => {
+    // setMorePhotosButton(!morePhotosButtonClicked);
+    setphotoCount(morePhotosCount);
+  }
+  useEffect(() => {
+    setphotoCount(clickedPhotoIdx + 1);
+    console.log("type of clickedPhotoIdx", typeof clickedPhotoIdx)
+    console.log("whats clickedPhotoIdx", clickedPhotoIdx)
+    console.log("type of photoCount", typeof photoCount)
+  }, [clickedPhotoIdx]);
+
   const addCount = () => {
-    if (photoCount < list.photos.length) {
-      // previous bug: setphotoCount(photoCount++); read-only prop!
-      setphotoCount(photoCount + 1);
-    }
+    photoCount < list.photos.length && setphotoCount(photoCount + 1);
   };
 
   const minusCount = () => {
-    if (photoCount > 1) {
-      setphotoCount(photoCount - 1);
-    }
+    photoCount > 1 && setphotoCount(photoCount - 1);
   };
 
-  const RightArrow = ({addCount}) => (
-    <ArrowButton right onClick={addCount}>
-    &gt;
-    </ArrowButton>
+  const RightArrow = ({ addCount }) => (
+    <ArrowButton right onClick={addCount}>&gt;</ArrowButton>
   );
 
-  const LeftArrow = ({minusCount}) => (
-    <ArrowButton left onClick={minusCount}>
-    &lt;
-    </ArrowButton>
+  const LeftArrow = ({ minusCount }) => (
+    <ArrowButton left onClick={minusCount}>&lt;</ArrowButton>
   );
+
+  useEffect(() => {
+    console.log("component changed");
+  }, []);
 
   return (
     // return the photo that its index matches the photoCount
     <div>
-      {/* <SlideModal> */}
-      <Closebutton onClick={closeModal}>X Close</Closebutton>
+      <Closebutton onClick={closeModal} >X Close</Closebutton>
       <Wrappingdiv>
-      <CountHeader>{photoCount}/{list.photos.length}</CountHeader>
+        {/* {console.log(photoCount)} */}
+        <CountHeader>{photoCount}/{list.photos.length}</CountHeader>
         <ModalImage src={list.photos[photoCount - 1]}/>
-        {/* onclick right arrow, num++, left arrow appears */}
         <LeftArrow minusCount={minusCount}/>
         <RightArrow addCount={addCount}/>
       </Wrappingdiv>
-      {/* </SlideModal> */}
     </div>
   )
+  // }
 };
 
-// const SlideModal = styled.div`
-//   transform: translateY(0%);
-//   animation: SlideUp 1s forwards;
-// `;
-
-// const SlideUp = keyframes`
-//   0% {
-//     transform: translateY(100%);
-//   }
-//   100% {
-//     transform: translateY(0%);
-//   }
-// `;
-
 const Wrappingdiv = styled.div`
-  position: relative;
   text-align: center;
   margin: 0px auto;
   width: 980px;
-  margin-top: 45px;
 `;
 
 const Closebutton = styled.button`
@@ -85,10 +76,13 @@ const Closebutton = styled.button`
   line-height: 18px;
   letter-spacing: 0.5px;
   color: #222222e3;
+  &: hover {
+    background-color: #e0e0e0;
+  }
 `;
 
 const CountHeader = styled.div`
-  display: inline;
+  /* display: inline; */
   font-size: 1em;
   font-family: Arial;
   margin-top: 45px;
@@ -97,9 +91,8 @@ const CountHeader = styled.div`
 `;
 
 const ModalImage = styled.img`
-  width: 100%;
+  width: 90%;
   margin-top: 40px;
-  margin-top: 50px;
 `;
 
 const ArrowButton = styled.button`
@@ -107,15 +100,13 @@ const ArrowButton = styled.button`
   border: 1px solid  #C5C5C5;
   font-size: 16px;
   background-color: white;
-  position: absolute;
-  top: 390px;
-  left: ${props => props.right ? '1350px' : 'none'};
-  right: ${props => props.left ? '1350px' : 'none'};
+  position: fixed;
+  top: 43%;
+  left: ${props => props.right ? 'none' : '25px'};
+  right: ${props => props.left ? 'none' : '45px'};
   padding: 14px 18px;
   cursor: pointer;
 `;
-
-
 
 
 export default Modal;

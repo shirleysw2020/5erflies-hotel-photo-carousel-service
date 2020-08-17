@@ -2,8 +2,8 @@
 
 exports[`Button component Matches the snapshot 1`] = `
 <button
-  className="sc-bdVaJa ezVGZq"
+  className="sc-bdVaJa gwQknd"
 >
-  Show more photos
+  Show all photos
 </button>
 `;

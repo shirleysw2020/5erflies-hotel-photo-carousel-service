@@ -18,22 +18,22 @@ module.exports.boccaccio = [
 ]
 
 module.exports.calanteLuna = [
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/249fd66d-2b01-47e1-9c40-ca7f78887dd3.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/004d5a66-ccf2-4b03-9bcf-93d3d735c6d5.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/88f6875c-8e12-4265-9e78-0f5b43f37d57.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/622f87e1_original.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/900afa63-66d2-46e4-9101-fac8a8100938.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/dfa62b68_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/948a8be4_original.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/c48534fa_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/3182f043_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/7741fe04_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/25b0294d-b043-455d-8cab-3e37f1427cea.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/e1335a3f_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/224268d9_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/9fdf18d7-9f7b-4774-8cd9-624ec840c212.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/c48534fa_original.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/d60066f4_original.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/dfa62b68_original.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/249fd66d-2b01-47e1-9c40-ca7f78887dd3.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/88f6875c-8e12-4265-9e78-0f5b43f37d57.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/900afa63-66d2-46e4-9101-fac8a8100938.jpg",
   "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/e4f394f7-50a6-407e-833e-134be3f472be.jpg",
-  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/e1335a3f_original.jpg",
+  "https://5erflies.s3-us-west-1.amazonaws.com/CalanteLuna/622f87e1_original.jpg",
 ]
 
 module.exports.trinita = [

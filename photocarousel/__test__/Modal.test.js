@@ -20,8 +20,9 @@ describe('<Modal />', () => {
 
 describe('<Modal />', () => {
   const addCount = () => setphotoCount(photoCount++);
+  const clickedPhotoIdx = 1;
   it('renders one <Header /> component', () => {
-    const wrapper = shallow(<Modal addCount={addCount} list={mockListing}/>);
+    const wrapper = shallow(<Modal addCount={addCount} list={mockListing} clickedPhotoIdx={clickedPhotoIdx}/>);
     expect(wrapper.children()).to.have.lengthOf(3);
   });
 });
