@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/listing', (req, res) => {
   // query the id thats typed into url
-  let id = req.query.id;
+  let id = req.query.propertyId;
   // console.log("clients typed in this query id", id)
   db.findById(id, (err, listing) => {
     if (err) {

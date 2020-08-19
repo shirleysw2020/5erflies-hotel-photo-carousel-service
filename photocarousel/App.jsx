@@ -50,6 +50,7 @@ const Photocarousel = () => {
           list={listing[0]}
           closeModal={closeModal}
           clickedPhotoIdx={clickedPhotoIdx}
+          show={showModal}
         />
       </Slider>
     </AppWrapper>
@@ -99,28 +100,17 @@ const slidedown = keyframes`
 
 const Slider = styled.div`
 /* null to prevent a slidedown / slide up without clicking button */
+  /* display: ${props => props.show ? 'block' : 'none'}; */
   animation: ${props => props.show === null ? 'none' : props.show ? slideup : slidedown};
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
   opacity: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: -5;
   display: inline-block;
   position: absolute; //for overlap the gallery
   top: 450px;
 `
 
 export default Photocarousel;
-
-// if (show === true) {
-//   return (
-//     <SlideModal>
-//     <Modal
-//       list={listing[0]}
-//       closeModal={closeModal}
-//       show={show}
-//     />
-//     </SlideModal>
-//   )
-// }

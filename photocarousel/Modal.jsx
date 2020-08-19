@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
+const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
 
   const [photoCount, setphotoCount] = useState(clickedPhotoIdx + 1);
   // var [photoCount, setphotoCount] = useState(1);
@@ -39,7 +39,17 @@ const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
     // return the photo that its index matches the photoCount
     <div>
       <Closebutton onClick={closeModal} >X Close</Closebutton>
-      <Wrappingdiv>
+      <Socialmedia>
+      <ShareButton>
+          <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/>
+          <Underline dark></Underline>
+      </ShareButton>
+      <ShareButton>
+          <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
+          <Underline dark></Underline>
+      </ShareButton>
+      </Socialmedia>
+      <Wrappingdiv show>
         {/* {console.log(photoCount)} */}
         <CountHeader>{photoCount}/{list.photos.length}</CountHeader>
         <ModalImage src={list.photos[photoCount - 1]}/>
@@ -50,10 +60,51 @@ const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
   )
 };
 
+const Socialmedia = styled.div`
+  display: inline-block;
+  float: right;
+  margin-top: 13px;
+  margin-right: 70px;
+`;
+
+const Underline = styled.span`
+  text-decoration: underline;
+  color: ${props => props.dark ? 'black' : props.theme.subColor};
+  padding: 0em 0.35em;
+  float: right;
+  cursor: pointer;
+  margin-top: ${props => props.location ? '3px' : 'none'};
+`;
+
+const Logo = styled.img`
+  width: ${props => props.host ? '10px' : '17px'};
+  height: ${props => props.host ? '16px' : 'none'};
+  padding-right: 7px;
+  float: ${props => props.share ? 'right' : 'none'};
+  cursor: pointer;
+  &: hover {
+    background-color: #f2f4f5;
+    padding: 5px 6px;
+    border: none;
+    border-radius: 8px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+`;
+
+const ShareButton = styled.button`
+  float: right;
+  border: none;
+  background-color: white;
+  padding: 5px 6px;
+  cursor: pointer;
+`;
+
 const Wrappingdiv = styled.div`
   text-align: center;
   margin: 0px auto;
   width: 980px;
+  display: ${props => props.show ? 'block' : 'none'};
 `;
 
 const Closebutton = styled.button`

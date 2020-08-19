@@ -1,34 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import Star from '../photos/star.png';
-import Superhost from '../photos/superhost.png';
-import Heart from '../photos/heart.png';
-import Share from '../photos/share.png';
+// import Star from '../photos/star.png';
+// import Superhost from '../photos/superhost.png';
+// import Heart from '../photos/heart.png';
+// import Share from '../photos/share.png';
 
 const Header = ({list}) => (
   <Wrapper>
       <ThemeProvider theme={theme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
           <InfoData>
-            <Logo src={Star}/>
+            <Logo src="https://5erflies.s3-us-west-1.amazonaws.com/icons/star.png"/>
             <RatingSpan>{list.rating}</RatingSpan>
             <SubColor>({list.numOfReviews})</SubColor>
             <Dot><span> • </span></Dot>
-            <Logo host src={Superhost}/>
+            <Logo host src="https://5erflies.s3-us-west-1.amazonaws.com/icons/superhost.png"/>
             <SubColor>{list.superHost.toString() ? (<span>Superhost</span>) : 'null'}</SubColor>
             <Dot><span> • </span></Dot>
             <Underline location>{list.location}</Underline>
           </InfoData>
           <Socialmedia>
-            <ShareButton>
-              <Logo share src={Heart}/>
+            {/* <ShareButton>
+              <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/>
               <Underline dark>Share</Underline>
             </ShareButton>
             <ShareButton>
-              <Logo share src={Share}/>
+              <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
               <Underline dark>Save</Underline>
-            </ShareButton>
+            </ShareButton> */}
           </Socialmedia>
       </ThemeProvider>
   </Wrapper>
