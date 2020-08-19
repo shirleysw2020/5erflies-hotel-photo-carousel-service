@@ -21,14 +21,14 @@ const Header = ({list}) => (
             <Underline location>{list.location}</Underline>
           </InfoData>
           <Socialmedia>
-            {/* <ShareButton>
+            <ShareButton>
               <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/>
               <Underline dark>Share</Underline>
             </ShareButton>
             <ShareButton>
               <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
               <Underline dark>Save</Underline>
-            </ShareButton> */}
+            </ShareButton>
           </Socialmedia>
       </ThemeProvider>
   </Wrapper>
