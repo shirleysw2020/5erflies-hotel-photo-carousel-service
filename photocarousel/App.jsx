@@ -109,8 +109,7 @@ const Slider = styled.div`
   display: inline-block;
   position: absolute; //for overlap the gallery
   top: 450px;
-`;
-
+`
 
 export default Photocarousel;
 
