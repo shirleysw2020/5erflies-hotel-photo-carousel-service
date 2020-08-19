@@ -48,7 +48,6 @@ const Modal = ({ list, closeModal, clickedPhotoIdx }) => {
       </Wrappingdiv>
     </div>
   )
-  // }
 };
 
 const Wrappingdiv = styled.div`

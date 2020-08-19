@@ -27,12 +27,14 @@ const Gallery = ({list, openModal, closeModal, show}) => (
 const RoundedCorner = styled.div`
   border-radius: 13px;
   overflow: hidden;
-  height: 372px;
+  /* height: 372px; */
+  display: flex;
 `;
 
 const Imgagery = styled.img`
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  height: 100%;
   cursor: pointer;
   display: block;
   &: hover {
@@ -44,23 +46,25 @@ const Imgagery = styled.img`
 
 const MainWrapper = styled.div`
   max-width: 1120px;
-  float: left;
-  width: 49.3%;
+  flex: 1;
+  /* float: left; */
+  /* width: 49.3%; */
   margin-right: 0.7%;
 `;
 
 const SubWrapper = styled.div`
   display: flex;
-  width: 50%;
+  /* width: 50%; */
   flex-flow: wrap;
   position: relative;
+  flex: 1;
 `;
 
 const Grid = styled.div`
   margin-right: ${props => props.picIndex % 2 === 0 ? '1.3%' : '0'};
   width: 49.35%;
   margin-bottom: ${props => props.picIndex < 2 ? '1.3%' : '0'};
-  height: 45%;
+  height: 49%;
   float: left;
   overflow: hidden;
 `;

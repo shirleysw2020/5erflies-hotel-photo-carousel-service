@@ -1,6 +1,6 @@
 var path = require('path');
 var SRC_DIR = path.join(__dirname, 'photocarousel');
-var DIST_DIR = path.join(__dirname, '/proxy/public');
+var DIST_DIR = path.join(__dirname, '/client/public');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,

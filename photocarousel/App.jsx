@@ -6,7 +6,7 @@ import Header from './Header.jsx';
 import Gallery from './Gallery.jsx';
 import Modal from './Modal.jsx';
 
-const App = () => {
+const Photocarousel = () => {
   const [listing, setListing] = useState([]);
   const [clickedPhotoIdx, setClickedPhoto] = useState(1)
   const [showModal, setShowModal] = useState(null);
@@ -112,7 +112,7 @@ const Slider = styled.div`
 `;
 
 
-export default App;
+export default Photocarousel;
 
 // if (show === true) {
 //   return (
