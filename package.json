@@ -1,9 +1,9 @@
 {
-  "name": "photo-carousel",
+  "name": "5erflies-hotel-photo-carousel-proxy",
   "version": "",
-  "description": "a clone of the airbnb photo carousel",
+  "description": "photo carousel service",
   "author": "Junlin",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },

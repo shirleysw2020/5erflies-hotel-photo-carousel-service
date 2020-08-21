@@ -63,7 +63,7 @@ const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
 const Socialmedia = styled.div`
   display: inline-block;
   float: right;
-  margin-top: 13px;
+  /* margin-top: 13px; only use in gallery mode not in modal!*/
   margin-right: 70px;
 `;
 
@@ -84,7 +84,7 @@ const Logo = styled.img`
   cursor: pointer;
   &: hover {
     background-color: #f2f4f5;
-    padding: 5px 6px;
+    padding: 3px 4px;
     border: none;
     border-radius: 8px;
     -webkit-transition: all 0.2s ease;
@@ -104,7 +104,7 @@ const Wrappingdiv = styled.div`
   text-align: center;
   margin: 0px auto;
   width: 980px;
-  display: ${props => props.show ? 'block' : 'none'};
+  /* display: ${props => props.show ? 'block' : 'none'}; */
 `;
 
 const Closebutton = styled.button`
@@ -143,7 +143,7 @@ const ModalImage = styled.img`
 `;
 
 const ArrowButton = styled.button`
-  border-radius: 50%
+  border-radius: 50%;
   border: 1px solid  #C5C5C5;
   font-size: 16px;
   background-color: white;
@@ -153,6 +153,9 @@ const ArrowButton = styled.button`
   right: ${props => props.left ? 'none' : '45px'};
   padding: 14px 18px;
   cursor: pointer;
+  &: hover {
+    background-color: #ededed;
+  }
 `;
 
 

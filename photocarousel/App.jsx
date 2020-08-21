@@ -22,9 +22,11 @@ const Photocarousel = () => {
   useEffect(() => { // a hooks version of componentDidMount
     const queryID = window.location.search;
     // console.log('logged: window.location (url parameter) = ?id=10', queryID)
-    const url = '/listing' + '/' + queryID;
+    const url = '/listing' + queryID;
+    // const url = '/listing' + '/' + queryID;
     axios.get(url)
     .then((res) => {
+      // console.log(res.data, "got this data from db");
       setListing(res.data);
     })
     .catch((err) => {
@@ -100,14 +102,14 @@ const slidedown = keyframes`
 
 const Slider = styled.div`
 /* null to prevent a slidedown / slide up without clicking button */
-  /* display: ${props => props.show ? 'block' : 'none'}; */
+  display: ${props => props.show ? 'block' : 'none'};
   animation: ${props => props.show === null ? 'none' : props.show ? slideup : slidedown};
   animation-duration: 0.6s;
   animation-fill-mode: forwards;
   opacity: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -5;
+  z-index: ${props => props.show ? '0' : '-10'};
   display: inline-block;
   position: absolute; //for overlap the gallery
   top: 450px;
