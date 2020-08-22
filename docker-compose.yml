@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  local_server:
+    container_name: local_server
+    build: ./
+    volumes:
+      - .:/src/app
+      - /src/app/node_modules/
+    depends_on:
+      - 'database'
+    ports:
+      - '3001:3001'
+
+  database:
+    image: mongo:latest
