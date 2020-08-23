@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://database/listing', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://database:27017/listing', { useNewUrlParser: true, useUnifiedTopology: true });
 // conencting mongoose orm to mongo
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
