@@ -20,11 +20,10 @@ const Photocarousel = () => {
   const closeModal = () => setShowModal(false);
   // console.log('clientb', listing);
 
-  useEffect(() => { // a hooks version of componentDidMount
+  useEffect(() => {
     const queryID = window.location.search;
-    // console.log('logged: window.location (url parameter) = ?id=10', queryID)
+    // console.log('url parameter is ?id=#', queryID)
     const url = '/listing' + queryID;
-    // const url = '/listing' + '/' + queryID;
     axios.get(url)
     .then((res) => {
       // console.log(res.data, "got this data from db");

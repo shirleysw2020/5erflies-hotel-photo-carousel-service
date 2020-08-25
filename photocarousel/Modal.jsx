@@ -37,7 +37,7 @@ const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
 
   return (
     // return the photo that its index matches the photoCount
-    <div>
+    <Background>
       <Closebutton onClick={closeModal} >X Close</Closebutton>
       <Socialmedia>
       <ShareButton>
@@ -56,9 +56,16 @@ const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
         <LeftArrow minusCount={minusCount}/>
         <RightArrow addCount={addCount}/>
       </Wrappingdiv>
-    </div>
+    </Background>
   )
 };
+
+const Background = styled.div`
+  z-index: 4;
+  background-color: white;
+  margin-bottom: 0px;
+  padding-bottom: 150px;
+`;
 
 const Socialmedia = styled.div`
   display: inline-block;

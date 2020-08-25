@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 // import Star from '../photos/star.png';
@@ -7,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 // import Share from '../photos/share.png';
 
 const Header = ({list}) => (
+
   <Wrapper>
       <ThemeProvider theme={theme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
@@ -15,9 +17,7 @@ const Header = ({list}) => (
             <RatingSpan>{list.rating}</RatingSpan>
             <SubColor>({list.numOfReviews})</SubColor>
             <Dot><span> • </span></Dot>
-            <Logo host src="https://5erflies.s3-us-west-1.amazonaws.com/icons/superhost.png"/>
-            <SubColor>{list.superHost.toString() ? (<span>Superhost</span>) : 'null'}</SubColor>
-            <Dot><span> • </span></Dot>
+            {list.superHost === true ? <span><Logo host src="https://5erflies.s3-us-west-1.amazonaws.com/icons/superhost.png"/><SubColor>Superhost<Dot> • </Dot></SubColor></span> : null}
             <Underline location>{list.location}</Underline>
           </InfoData>
           <Socialmedia>
@@ -27,12 +27,13 @@ const Header = ({list}) => (
             </ShareButton>
             <ShareButton>
               <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
+              {/* @styled-icons/boxicons-regular/Heart */}
               <Underline dark>Save</Underline>
             </ShareButton>
           </Socialmedia>
       </ThemeProvider>
   </Wrapper>
-)
+);
 
 
 const theme = {
@@ -48,8 +49,8 @@ const Wrapper = styled.div`
 
 const InfoData = styled.div`
   display: inline-block;
-  font-size: 14px;
-  padding-top: 15px;
+  font-size: 15px;
+  padding-top: 20px;
   color: ${props => props.theme.color};
   font-family: Circular, Roboto, "Helvetica Neue", sans-serif;
 `;
@@ -85,10 +86,9 @@ const SubColor = styled.span`
 const Underline = styled.span`
   text-decoration: underline;
   color: ${props => props.dark ? 'black' : props.theme.subColor};
-  padding: 0em 0.35em;
+  padding: 0.2em 0.35em;
   float: right;
   cursor: pointer;
-  margin-top: ${props => props.location ? '3px' : 'none'};
 `;
 
 const Dot = styled.span`
@@ -97,8 +97,9 @@ const Dot = styled.span`
 `
 const Logo = styled.img`
   width: ${props => props.host ? '10px' : '17px'};
-  height: ${props => props.host ? '16px' : 'none'};
+  height: 16px;
   padding-right: 7px;
+  padding-top: ${props => props.share ? '3px' : 'none'};
   float: ${props => props.share ? 'right' : 'none'};
   cursor: pointer;
 `;
