@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header> components should match snapshot created 1`] = `
+<div
+  className="sc-bdVaJa PeosY"
+>
+  <section
+    className="sc-ifAKCX dmvJkz"
+  >
+    CalanteLuna Relais - M'Illumino d'Immenso
+  </section>
+  <div
+    className="sc-bwzfXH kZXRah"
+  >
+    <img
+      className="sc-dnqmqq bFJaqh"
+      src="test-file-stub"
+    />
+    <span
+      className="sc-EHOje bsuoWl"
+    >
+      4.01
+    </span>
+    <span
+      className="sc-bZQynM BuzJs"
+    >
+      (
+      473
+      )
+    </span>
+    <span
+      className="sc-htoDjs etCUlw"
+    >
+      <span>
+         • 
+      </span>
+    </span>
+    <img
+      className="sc-dnqmqq kTZvYA"
+      src="test-file-stub"
+    />
+    <span
+      className="sc-bZQynM BuzJs"
+    >
+      <span>
+        Superhost
+      </span>
+    </span>
+    <span
+      className="sc-htoDjs etCUlw"
+    >
+      <span>
+         • 
+      </span>
+    </span>
+    <span
+      className="sc-gzVnrw Ajofz"
+    >
+      Gottliebchester Borders Italy
+    </span>
+  </div>
+  <div
+    className="sc-htpNat fTeqPD"
+  >
+    <button
+      className="sc-iwsKbI hRMDpm"
+    >
+      <img
+        className="sc-dnqmqq gStQyt"
+        src="test-file-stub"
+      />
+      <span
+        className="sc-gzVnrw lnKKkD"
+      >
+        Share
+      </span>
+    </button>
+    <button
+      className="sc-iwsKbI hRMDpm"
+    >
+      <img
+        className="sc-dnqmqq gStQyt"
+        src="test-file-stub"
+      />
+      <span
+        className="sc-gzVnrw lnKKkD"
+      >
+        Save
+      </span>
+    </button>
+  </div>
+</div>
+`;

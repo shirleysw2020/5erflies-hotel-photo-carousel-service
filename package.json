@@ -1,17 +1,58 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "5erflies-hotel-photo-carousel-proxy",
+  "version": "1.0.0",
+  "description": "photo carousel service",
+  "author": "Junlin",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "node client/server.js",
+    "dev-start": "nodemon client/server.js",
+    "react-dev": "webpack -d --watch",
+    "build": "webpack --config webpack.config.js",
+    "seed": "node seed.js",
+    "test": "jest",
+    "watch": "jest --watch",
+    "coverage": "jest --coverage --colors"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sinon": "^9.0.3",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-to-json": "^3.5.0",
+    "file-loader": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.1",
+    "jest-styled-components": "^7.0.2",
+    "react-test-renderer": "^16.13.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "setupFilesAfterEnv": [
+    "<rootDir>/photocarousel/__test__/src/setupTes.js"
+  ]
 }

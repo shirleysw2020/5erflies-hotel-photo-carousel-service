@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there is one item 1`] = `
+<div
+  className="sc-bwzfXH kWcmvg"
+>
+  <div
+    className="sc-bxivhb dogdys"
+  >
+    <img
+      className="sc-htpNat hcRaaq"
+      onClick={[Function]}
+      src="https://5erflies.s3-us-west-1.amazonaws.com/1f57bf4f-0b96-4b38-81ad-afc9f739a7a8.jpg"
+    />
+  </div>
+  <div
+    className="sc-ifAKCX cHkelG"
+  >
+    <div
+      className="sc-EHOje gozIrZ"
+    >
+      <img
+        className="sc-htpNat hcRaaq"
+        onClick={[Function]}
+        src="https://5erflies.s3-us-west-1.amazonaws.com/7fb02bb9-0965-4ffc-a59d-8d7e64f4d9f8.jpg"
+      />
+    </div>
+    <div
+      className="sc-EHOje jeQsCS"
+    >
+      <img
+        className="sc-htpNat hcRaaq"
+        onClick={[Function]}
+        src="https://5erflies.s3-us-west-1.amazonaws.com/8e0e456c-10c0-4faa-8297-19f9453937f4.jpg"
+      />
+    </div>
+    <div
+      className="sc-EHOje EPdPm"
+    >
+      <img
+        className="sc-htpNat hcRaaq"
+        onClick={[Function]}
+        src="https://5erflies.s3-us-west-1.amazonaws.com/345b5185-33e6-402b-90d5-93c5d8b7d0e9.jpg"
+      />
+    </div>
+    <div
+      className="sc-EHOje fzWQRz"
+    >
+      <img
+        className="sc-htpNat hcRaaq"
+        onClick={[Function]}
+        src="https://5erflies.s3-us-west-1.amazonaws.com/9383d706-87a3-4da1-942e-690b6c438d5c.jpg"
+      />
+    </div>
+    <button
+      className="sc-bdVaJa gwQknd"
+    >
+      Show all photos
+    </button>
+  </div>
+</div>
+`;
