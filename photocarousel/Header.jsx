@@ -6,9 +6,14 @@ import { ThemeProvider } from 'styled-components';
 // import Superhost from '../photos/superhost.png';
 // import Heart from '../photos/heart.png';
 // import Share from '../photos/share.png';
+const Header = ({list}) => {
+  const [heartClick, setHeartClick] = useState(false);
+  const setHeart = () => {
+    console.log('hi');
+    setHeartClick(!heartClick);
+  }
 
-const Header = ({list}) => (
-
+  return (
   <Wrapper>
       <ThemeProvider theme={theme}>
           <TitleBlock>{list.listingTitle}</TitleBlock>
@@ -21,20 +26,21 @@ const Header = ({list}) => (
             <Underline location>{list.location}</Underline>
           </InfoData>
           <Socialmedia>
-            <ShareButton>
-              <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/>
+            <ShareButton onClick={setHeart}>
+              {heartClick == false ? <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/> :
+            <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart-red.png"/>}
+              {/* <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/heart.png"/> */}
               <Underline dark>Share</Underline>
             </ShareButton>
             <ShareButton>
               <Logo share src="https://5erflies.s3-us-west-1.amazonaws.com/icons/share.png"/>
-              {/* @styled-icons/boxicons-regular/Heart */}
               <Underline dark>Save</Underline>
             </ShareButton>
           </Socialmedia>
       </ThemeProvider>
   </Wrapper>
-);
-
+  )
+};
 
 const theme = {
   titleColor: '#000',
