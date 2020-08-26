@@ -4,11 +4,8 @@ import styled, { keyframes } from 'styled-components';
 const Modal = ({ list, closeModal, clickedPhotoIdx, show }) => {
 
   const [photoCount, setphotoCount] = useState(clickedPhotoIdx + 1);
-  // var [photoCount, setphotoCount] = useState(1);
   const [morePhotosCount, setMorePhotosCount] = useState(1);
-  // var [morePhotosButtonClicked, setMorePhotosButton] = useState(false);
   const clickedButton = () => {
-    // setMorePhotosButton(!morePhotosButtonClicked);
     setphotoCount(morePhotosCount);
   }
   useEffect(() => {
@@ -105,13 +102,13 @@ const ShareButton = styled.button`
   background-color: white;
   padding: 5px 6px;
   cursor: pointer;
+  outline: none;
 `;
 
 const Wrappingdiv = styled.div`
   text-align: center;
   margin: 0px auto;
   width: 980px;
-  /* display: ${props => props.show ? 'block' : 'none'}; */
 `;
 
 const Closebutton = styled.button`
@@ -130,13 +127,13 @@ const Closebutton = styled.button`
   line-height: 18px;
   letter-spacing: 0.5px;
   color: #222222e3;
+  outline: none;
   &: hover {
     background-color: #e0e0e0;
   }
 `;
 
 const CountHeader = styled.div`
-  /* display: inline; */
   font-size: 1em;
   font-family: Arial;
   margin-top: 45px;
@@ -160,6 +157,7 @@ const ArrowButton = styled.button`
   right: ${props => props.left ? 'none' : '45px'};
   padding: 14px 18px;
   cursor: pointer;
+  outline: none;
   &: hover {
     background-color: #ededed;
   }

@@ -11,6 +11,7 @@ const Photocarousel = () => {
   const [listing, setListing] = useState([]);
   const [clickedPhotoIdx, setClickedPhoto] = useState(1)
   const [showModal, setShowModal] = useState(null);
+
   const openModal = (index) => {
     if (typeof index === 'number') {
       setClickedPhoto(index);
@@ -33,7 +34,6 @@ const Photocarousel = () => {
       console.log('client: failed getting db', err);
     })
   }, []);
-
 
   if (listing.length == 0) {return null;}
   return (

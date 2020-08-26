@@ -25,6 +25,7 @@ const PhotoButton = styled.button`
   background-color: #F7F7F7;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   border-width: 1px;
+  outline: none;
 `;
 
 export default Button;
