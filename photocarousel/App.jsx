@@ -7,7 +7,6 @@ import Gallery from './Gallery.jsx';
 import Modal from './Modal.jsx';
 
 const Photocarousel = () => {
-  // const [listing, setListing] = useState([{}]);
   const [listing, setListing] = useState([]);
   const [clickedPhotoIdx, setClickedPhoto] = useState(1)
   const [showModal, setShowModal] = useState(null);
